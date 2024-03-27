@@ -7,6 +7,9 @@ passwd_file = sys.argv[3]
 ssh_port = sys.argv[4] if len(sys.argv) > 4 else 22
 attempts = 0
 
+if len(sys.arg) != 3:
+	print("Wrong argument! {}".format(sys.argv[0]))
+	print(">> {} <host> <username_file> <password_file> <port>[optional]")
 
 
 with open(uname_file,'r') as uname_list:
